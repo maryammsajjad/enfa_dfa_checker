@@ -5,3 +5,7 @@
 
 
 import fado
+
+
+def main():
+    regex = input("enter your regular expression: ")
