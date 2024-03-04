@@ -19,7 +19,10 @@ def main():
     list_of_strings = list_of_strings.split(" ")
     regex_to_nfa(regex_new, list_of_strings, nfa_dfa_dict)
     regex_to_dfa(regex_new, list_of_strings, nfa_dfa_dict)
-    print(nfa_dfa_dict)
+    print("{:<8} {:<15} {:<25} {:<15} {:<25}".format('String', 'Accepted by NFA', 'Time', 'Accepted by DFA', 'Time'))
+    for k, v in nfa_dfa_dict.items():
+        enfa, time1, dfa, time2 = v
+        print("{:<8} {:<15} {:<25} {:<15} {:<25}".format(k, enfa, time1, dfa, time2))
 
 
 def regex_to_nfa(regex, list_of_strings, nfa_dfa_dict):
